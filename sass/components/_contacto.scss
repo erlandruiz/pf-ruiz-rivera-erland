@@ -1,0 +1,89 @@
+/* Seccion Contacto */
+.contacto{
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../assets/img/fondocontacto.png");
+      background-size: cover;
+      color: $colorBlanco;
+      padding: 100px 0;
+      display: flex;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      
+     
+     
+    }
+    .contacto .contenido-seccion{
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      /* justify-content: center;
+      margin: auto;
+      align-items: center; */
+     
+    }
+    /*Mixin de H3 */
+    .contacto .contenido-seccion h3{
+      @include letraH3($colorBlanco)
+    
+    }
+    .contacto .contenido-seccion .fila{
+      display: flex;
+    }
+    .contacto .contenido-seccion .fila .col{
+      width: 50%;
+      padding: 10px;
+      position: relative;
+    }
+    
+    .contacto .contenido-seccion .fila .col input, .contacto .contenido-seccion .fila .col textarea{
+      display: block;
+      width: 100%;
+      padding: 18px;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    /*Extend de  boton contactar*/
+    .contacto .contenido-seccion .fila .col button{
+      @extend %buttonContactar;
+    }
+    .contacto .contenido-seccion .fila .col img{
+      width: 100%;
+    }
+    .contacto .contenido-seccion .fila .col .info{
+      position: absolute;
+      background-color: $colorNegro;
+      padding: 20px;
+      width: fit-content;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50% , -50%);
+    }
+    .contacto .contenido-seccion .fila .col .info ul{
+      list-style: none;
+    }
+    .contacto .contenido-seccion .fila .col .info ul li{
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    .contacto  .contenido-seccion .fila .col .info ul li i{
+      color: $colorLetraLogo;
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+
+    
+/* Seccion Adaptable responsivo */
+
+  /* Seccion responsivo pagina de contacto */
+@media screen and (max-width:768px) {
+    .contacto .contenido-seccion .fila{
+      display: block;
+    }
+    .contacto .contenido-seccion .fila .col{
+      width: 100%;
+    }
+  }
+  

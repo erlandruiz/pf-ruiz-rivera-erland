@@ -1,0 +1,15 @@
+/*abstracts*/
+@import './abstracts/variables';
+
+/*base*/
+@import './base/resets' , './base/base';
+
+/*layout*/
+@import './layout/header', './layout/footer';
+
+/*components*/
+@import './components/inicio',
+        './components/nosotros',
+        './components/servicios',
+        './components/portfolio',
+        './components/contacto';

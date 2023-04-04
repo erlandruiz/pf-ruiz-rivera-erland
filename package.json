@@ -1,0 +1,11 @@
+{
+  "name": "pf-ruiz-rivera-erland",
+  "version": "1.0.0",
+  "description": "Proyecto CoderHouse Desarrollo Web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Erland Ruiz Rivera",
+  "license": "ISC"
+}

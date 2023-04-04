@@ -1,0 +1,549 @@
+/*abstracts*/ /*Variables */
+/*Color*/
+/*base*/
+/*Agregar fuente*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap");
+/*Estilo universal para evitar conflictos con Padding y margin*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*Uso de Mixing*/
+/*Mixin para Letra H3, paginas nosotros, servicios, portfolio, contacto*/
+/*Uso de Extend*/
+/*Parametros de letra en pagina Nosotros y Portfolio*/
+.portfolio-texto, .sobrenosotros .contenido-seccion p {
+  font-size: 20px;
+  text-align: center;
+}
+
+/*Parametros de boton contactar paginna Inicio y contacto*/
+.contacto .contenido-seccion .fila .col button, .presentacion-contenido button {
+  text-decoration: none;
+  list-style: none;
+  text-transform: uppercase;
+  border-radius: 14px;
+  background-color: rgb(44, 136, 217);
+  padding: 16px 20px;
+  color: #fff;
+  font-weight: 800;
+  display: block;
+  border: 2px #fff solid;
+  cursor: pointer;
+}
+
+.presentacion-contenido .presentacion h2 span, footer .logoerland {
+  font-size: 45px;
+  color: rgb(44, 136, 217);
+  font-family: Haettenschweiler, sans-serif;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+/*layout*/
+/* Seccion encabezado */
+/*Aplicando nesting*/
+.navbar {
+  padding: 0.5rem;
+  background-color: rgb(195, 207, 217);
+}
+.navbar .navbar-collapse {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .navbar-brand h1 {
+  color: rgb(44, 136, 217);
+  font-family: Haettenschweiler, sans-serif;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/*Aplicando nesting*/
+.nav-item a {
+  color: rgb(44, 136, 217);
+  font-weight: 400;
+  font-size: 20px;
+}
+.nav-item a:hover {
+  color: #fff;
+}
+
+/* Seccion encabezado iconos-redes-sociales */
+/*Aplicando nesting*/
+.iconos-redes-sociales a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  margin: 10px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.iconos-redes-sociales a:hover {
+  border: 2px solid rgb(44, 136, 217);
+}
+
+.iconos-redes-sociales i {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.iconos-redes-sociales a:hover i {
+  color: rgb(44, 136, 217);
+}
+
+/*Aplicando Nesting*/
+footer {
+  padding: 0.2px;
+}
+footer .logoerland {
+  /*Extend de Letra de Logo Erland*/
+  margin: 2px;
+  padding: 2px;
+}
+footer .descripcion-derechos {
+  text-align: center;
+}
+
+/*components*/
+/* Seccion pagina de inicio */
+/*Aplicando Nesting*/
+.presentacion-contenido {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/img/fondo-inicio.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+.presentacion-contenido .presentacion {
+  max-width: 1100px;
+  color: #fff;
+  margin: auto;
+  height: 100vh;
+}
+.presentacion-contenido .presentacion .bienvenida {
+  letter-spacing: 5px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/*Aplicando Nesting*/
+.presentacion-contenido .presentacion h2 {
+  font-size: 47px;
+  margin-bottom: 25px;
+  text-align: center;
+  /*Extend de Letra de Logo Erland*/
+}
+.presentacion-contenido .presentacion h2 span {
+  margin: 25px;
+}
+
+.presentacion-contenido .presentacion .descripcion {
+  text-align: center;
+  max-width: 800px;
+  margin: 25px;
+  font-size: 20px;
+}
+
+/*Extend de  boton contactar*/
+/* Seccion Adaptable responsivo */
+/* Adaptable responsivo pagina de Inicio h2 span y descripcion */
+@media screen and (max-width: 768px) {
+  .presentacion-contenido .presentacion h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .presentacion-contenido .presentacion h2 span {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  .presentacion-contenido .presentacion .descripcion {
+    margin: 20px;
+    font-size: 18px;
+  }
+}
+/* Sobrenosotros */
+/*Aplicando Nesting*/
+.sobrenosotros {
+  padding: 100px 0 40px 0;
+}
+.sobrenosotros .contenido-seccion {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.sobrenosotrosok {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/img/fondo-inicio.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: auto;
+  padding-bottom: 50px;
+}
+
+/*Mixin de H3 */
+.sobrenosotros .contenido-seccion h3 {
+  font-size: 25px;
+  color: rgb(44, 136, 217);
+  padding: 20px 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Extend en letra en pagina Nosotros y Portfolio*/
+.sobrenosotros .contenido-seccion p {
+  line-height: 22px;
+  margin-top: 12px;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+/* Datos empresariales*/
+/*Aplicando Nesting*/
+.columna {
+  margin-bottom: 40px;
+}
+.columna h4 {
+  font-size: 23px;
+  color: rgb(44, 136, 217);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/*Aplicando Nesting*/
+.datos-empresariales .columna ul {
+  list-style: none;
+  text-align: center;
+}
+.datos-empresariales .columna ul li strong {
+  display: inline-block;
+  color: rgb(44, 136, 217);
+  padding: 20px 0;
+}
+.datos-empresariales .columna ul li {
+  color: #fff;
+}
+
+/* Seccion intereses*/
+.intereses .row .interes {
+  background-color: rgb(195, 207, 217);
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px rgb(44, 136, 217) solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  /* margin: auto; */
+  /* margin: 0px 15px 15px 0px; */
+  align-items: center;
+  transition: all 0.2s ease-in;
+}
+
+.intereses h4 {
+  font-size: 23px;
+  color: rgb(44, 136, 217);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.intereses .row .interes:hover {
+  background-color: #fff;
+  border: 2px #000 solid;
+}
+
+.intereses .row .interes i {
+  font-size: 35pX;
+  margin-bottom: 10px;
+  color: rgb(44, 136, 217);
+}
+
+.intereses .row .interes:hover i {
+  color: #000;
+}
+
+.intereses .row .interes span {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  color: rgb(44, 136, 217);
+}
+
+.intereses .row .interes:hover span {
+  color: #000;
+}
+
+.intereses .row .interes p {
+  margin-bottom: 10px;
+  color: rgb(44, 136, 217);
+}
+
+.intereses .row .interes:hover p {
+  color: #000;
+}
+
+/* Seccion Adaptable responsivo */
+/* Adaptable responsivo pagina sobre nosotros datos-empresariales  */
+@media screen and (max-width: 992px) {
+  .datos-intereses .datos-empresariales-interes {
+    text-align: center;
+  }
+  .sobrenosotros .contenido-seccion p {
+    margin: 12px 50px 50px 50px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .sobrenosotros .contenido-seccion p {
+    margin: 12px 20px 20px 20px;
+  }
+}
+/* Seccion Servicios */
+/*Aplicando Nesting*/
+.servicios {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/img/fondo-inicio.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: auto;
+  padding: 100px 0;
+  /*Mixin de H3 */
+}
+.servicios h3 {
+  font-size: 25px;
+  color: rgb(44, 136, 217);
+  padding: 20px 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+.servicios img {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  display: block;
+  transition: all 0.2s ease;
+}
+
+.servicios-contenedor {
+  margin-bottom: 40px;
+}
+
+/*Aplicando Nesting*/
+.overlay {
+  transition: all 0.2s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.overlay p {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 0;
+  color: #fff;
+}
+.overlay i {
+  font-size: 60px;
+  color: #fff;
+  margin: 10px;
+}
+.overlay .iconos {
+  display: flex;
+}
+
+.servicio {
+  position: relative;
+}
+
+.servicio:hover img {
+  opacity: 0.2;
+}
+
+.servicio:hover .overlay {
+  opacity: 1;
+}
+
+/* Seccion Adaptable responsivo */
+/* Adaptable responsivo pagina servicios  iconos de github y crome  */
+@media screen and (max-width: 576px) {
+  .overlay i {
+    font-size: 35px;
+  }
+  .overlay p {
+    font-size: 16px;
+  }
+}
+/* Seccion portfolio */
+/*Aplicando Nesting*/
+.portfolio {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/img/fondo-inicio.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: auto;
+  padding: 100px 0;
+  /*Mixin de H3 */
+}
+.portfolio h3 {
+  font-size: 25px;
+  color: rgb(44, 136, 217);
+  padding: 20px 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+.portfolio .carousel {
+  max-width: 800px;
+}
+
+/*Aplicando Nesting*/
+.carousel-item {
+  height: 500px;
+}
+.carousel-item .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-imagen {
+  margin: 10px 10px 20px 10px;
+}
+
+/* Extend en letra en pagina Nosotros y Portfolio*/
+.portfolio-texto {
+  max-width: 70%;
+  color: #fff;
+}
+
+/*Aplicando Nesting*/
+.portfolio-info {
+  font-weight: bold;
+  text-align: center;
+}
+.portfolio-info p {
+  margin-bottom: 0;
+  color: #fff;
+}
+.portfolio-info .cliente {
+  font-size: 22px;
+}
+.portfolio-info .cargo {
+  font-size: 14px;
+}
+
+/* Seccion Adaptable responsivo */
+/* Adaptable responsivo pagina de portfolio carousel */
+@media screen and (max-width: 576px) {
+  .portfolio-texto {
+    font-size: 16px;
+  }
+  .portfolio-info .cliente {
+    font-size: 18px;
+  }
+  .portfolio-info .cargo {
+    font-size: 12px;
+  }
+}
+/* Seccion Contacto */
+.contacto {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../assets/img/fondocontacto.png");
+  background-size: cover;
+  color: #fff;
+  padding: 100px 0;
+  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.contacto .contenido-seccion {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  margin: auto;
+  align-items: center; */
+}
+
+/*Mixin de H3 */
+.contacto .contenido-seccion h3 {
+  font-size: 25px;
+  color: #fff;
+  padding: 20px 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.contacto .contenido-seccion .fila {
+  display: flex;
+}
+
+.contacto .contenido-seccion .fila .col {
+  width: 50%;
+  padding: 10px;
+  position: relative;
+}
+
+.contacto .contenido-seccion .fila .col input, .contacto .contenido-seccion .fila .col textarea {
+  display: block;
+  width: 100%;
+  padding: 18px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+/*Extend de  boton contactar*/
+.contacto .contenido-seccion .fila .col img {
+  width: 100%;
+}
+
+.contacto .contenido-seccion .fila .col .info {
+  position: absolute;
+  background-color: #000;
+  padding: 20px;
+  width: fit-content;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contacto .contenido-seccion .fila .col .info ul {
+  list-style: none;
+}
+
+.contacto .contenido-seccion .fila .col .info ul li {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.contacto .contenido-seccion .fila .col .info ul li i {
+  color: rgb(44, 136, 217);
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* Seccion Adaptable responsivo */
+/* Seccion responsivo pagina de contacto */
+@media screen and (max-width: 768px) {
+  .contacto .contenido-seccion .fila {
+    display: block;
+  }
+  .contacto .contenido-seccion .fila .col {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

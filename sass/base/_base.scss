@@ -1,0 +1,47 @@
+
+
+/*Uso de Mixing*/
+
+/*Mixin para Letra H3, paginas nosotros, servicios, portfolio, contacto*/
+@mixin  letraH3($colorLetra){
+    font-size: 25px;
+    color: $colorLetra;
+    padding: 20px 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+/*Uso de Extend*/
+/*Parametros de letra en pagina Nosotros y Portfolio*/
+%letraParrafoNosotrosPortfolio{
+    font-size: 20px;
+    text-align: center;
+
+}
+
+
+/*Parametros de boton contactar paginna Inicio y contacto*/
+
+%buttonContactar{
+    text-decoration: none;
+    list-style: none;
+    text-transform: uppercase;
+    border-radius: 14px;
+    background-color: $colorLetraLogo ;
+    padding: 16px 20px;
+    color: $colorBlanco;
+    font-weight: 800;
+    display: block;
+    border: 2px $colorBlanco solid;
+    cursor: pointer;
+
+}
+
+%logoErland{
+    font-size: 45px;
+    color: $colorLetraLogo;
+    font-family:  Haettenschweiler, sans-serif;
+    letter-spacing: 2px;
+    font-weight: 400;
+}

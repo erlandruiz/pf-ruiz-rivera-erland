@@ -1,0 +1,73 @@
+ /* Seccion pagina de inicio */
+ /*Aplicando Nesting*/
+ .presentacion-contenido{
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url("../assets/img/fondo-inicio.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+
+
+    .presentacion{
+      max-width: 1100px;
+      color:$colorBlanco;
+      margin: auto;
+      height: 100vh;
+      .bienvenida{
+        letter-spacing: 5px;
+        font-size: 16px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+
+    }
+
+  }
+  
+ 
+  /*Aplicando Nesting*/
+  .presentacion-contenido .presentacion h2{
+    font-size: 47px;
+    margin-bottom: 25px;
+    text-align: center;
+
+     /*Extend de Letra de Logo Erland*/
+     span{
+      @extend %logoErland;
+      margin: 25px;
+    }
+    
+  }
+
+ 
+
+
+  .presentacion-contenido .presentacion .descripcion{
+    text-align: center;
+    max-width: 800px;
+    margin: 25px;
+    font-size: 20px;
+  }
+
+  /*Extend de  boton contactar*/
+  .presentacion-contenido button{
+    @extend %buttonContactar;
+  }
+  /* Seccion Adaptable responsivo */
+  /* Adaptable responsivo pagina de Inicio h2 span y descripcion */
+
+@media screen and (max-width:768px){
+  .presentacion-contenido .presentacion h2{
+    font-size: 35px;
+    margin-bottom: 20px;
+    text-align: center; 
+  }
+  .presentacion-contenido .presentacion h2 span{
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  .presentacion-contenido .presentacion .descripcion{
+  
+    margin: 20px;
+    font-size: 18px;
+  }
+}

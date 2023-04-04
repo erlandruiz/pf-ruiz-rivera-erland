@@ -1,0 +1,83 @@
+/* Seccion portfolio */
+/*Aplicando Nesting*/
+.portfolio{
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url("../assets/img/fondo-inicio.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: auto;
+    padding: 100px 0;
+    /*Mixin de H3 */
+    h3{
+      @include letraH3($colorLetraLogo);
+    
+    }
+    .carousel{
+      max-width: 800px;
+    }
+  }
+
+ /*Aplicando Nesting*/
+  .carousel-item{
+    height: 500px;
+    .container{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
+  
+  
+  .portfolio-imagen{
+  
+    margin: 10px 10px 20px 10px;
+  }
+
+  /* Extend en letra en pagina Nosotros y Portfolio*/
+  .portfolio-texto{
+    @extend %letraParrafoNosotrosPortfolio;
+    max-width: 70%;
+    color: $colorBlanco;
+  }
+
+  /*Aplicando Nesting*/
+  .portfolio-info{
+    font-weight: bold;
+    text-align: center;
+    p{
+      margin-bottom: 0;
+      color: $colorBlanco;
+    }
+    .cliente{
+      font-size: 22px;
+    }
+    .cargo{
+      font-size: 14px;
+      
+    }
+
+  }
+ 
+
+  
+
+  
+
+/* Seccion Adaptable responsivo */
+
+/* Adaptable responsivo pagina de portfolio carousel */
+@media screen and (max-width:576px){
+  .portfolio-texto{
+    font-size: 16px;
+  }
+  .portfolio-info .cliente{
+    font-size: 18px;
+  }
+  .portfolio-info .cargo{
+    font-size: 12px;
+    
+  }
+}

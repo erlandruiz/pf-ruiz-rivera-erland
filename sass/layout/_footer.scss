@@ -1,0 +1,17 @@
+// Secion de footer
+
+/*Aplicando Nesting*/
+footer{
+    padding: 0.2px;
+    .logoerland{
+        /*Extend de Letra de Logo Erland*/
+        @extend %logoErland;
+        margin: 2px;
+        padding: 2px;
+    }
+    .descripcion-derechos{
+        text-align: center;
+    }
+
+
+}
